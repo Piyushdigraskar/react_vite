@@ -1,20 +1,17 @@
 import { useState } from 'react'
-import MyComponent from './components/myComponent'
+//import MyComponent from './components/myComponent'
+import MyPureComponent from './components/myPureComponent';
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [name, setName] = useState("Piyush");
 
   return (
-    <>
-    <MyComponent />
-      <div>
-      <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-      </div>
-    </>
-  )
+    <div>
+      <button onClick={() => setName("Piyush")}>Set Name</button>
+      <MyPureComponent name={name} />
+    </div>
+  );
 }
 
 export default App
